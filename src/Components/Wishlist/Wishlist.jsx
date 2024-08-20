@@ -32,6 +32,14 @@ export default function Wishlist() {
         });
     }
 
+    function addToWishlist(id) {
+        console.log("done");
+        toast.promise(addProductToWishlist(id), {
+            loading: 'Loading',
+            success: 'Product added to WishList successfully',
+            error: 'Error in add Product try again ',
+        });
+    }
     
     if (!productWish) {
         return <div className="d-flex vh-100 bg-primary bg-opacity-50 justify-content-center align-items-center">
